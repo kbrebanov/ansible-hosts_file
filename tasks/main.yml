@@ -1,2 +1,11 @@
 ---
 # tasks file for hosts_file
+
+- name: Configure hosts file
+  template: >
+    src=hosts.j2
+    dest=/etc/hosts
+    owner=root
+    group=root
+    mode=0644
+  tags: hosts_file
