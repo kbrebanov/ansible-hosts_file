@@ -1,2 +1,5 @@
 ---
 # defaults file for hosts_file
+
+hosts_file_local_fqdn: "{{ ansible_fqdn }}"
+hosts_file_local_hostname: "{{ ansible_hostname }}"
