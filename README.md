@@ -11,17 +11,25 @@ This role requires Ansible 1.4 or higher.
 Role Variables
 --------------
 
+| Name                      | Default                  | Description    |
+|---------------------------|--------------------------|----------------|
+| hosts_file_local_fqdn     | "{{ ansible_fqdn }}"     | Local FQDN     |
+| hosts_file_local_hostname | "{{ ansible_hostname }}" | Local hostname |
+
 Dependencies
 ------------
+
+None
 
 Example Playbook
 ----------------
 
-1) Configure /etc/hosts file
-
-    - hosts: all
-      roles:
-         - { role: hosts_file }
+Configure /etc/hosts file using default values
+```
+- hosts: all
+  roles:
+    - { role: kbrebanov.hosts_file }
+```
 
 License
 -------
