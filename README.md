@@ -1,6 +1,8 @@
 hosts_file
 ==========
 
+[![Ansible Galaxy](https://img.shields.io/badge/galaxy-kbrebanov.hosts_file-660198.svg)](https://galaxy.ansible.com/list#/roles/3387)
+
 Configures /etc/hosts file
 
 Requirements
