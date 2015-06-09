@@ -1,6 +1,18 @@
 ---
 # tasks file for hosts_file
 
+- name: Include distribution specific variables
+  include_vars: "{{ ansible_distribution }}.yml"
+  tags: hosts_file
+
+- include: CentOS.yml
+  when: ansible_distribution == "CentOS"
+  tags: hosts_file
+
+- include: Ubuntu.yml
+  when: ansible_distribution == "Ubuntu"
+  tags: hosts_file
+
 - name: Configure hosts file
   template: >
     src=hosts.j2
