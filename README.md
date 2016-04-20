@@ -8,13 +8,13 @@ Configures /etc/hosts file
 Requirements
 ------------
 
-This role requires Ansible 1.4 or higher.
+This role requires Ansible 1.9 or higher.
 
 Role Variables
 --------------
 
 | Name                      | Default                  | Description    |
-|---------------------------|--------------------------|----------------|
+|:--------------------------|:-------------------------|:---------------|
 | hosts_file_local_fqdn     | "{{ ansible_fqdn }}"     | Local FQDN     |
 | hosts_file_local_hostname | "{{ ansible_hostname }}" | Local hostname |
 
