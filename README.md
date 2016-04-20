@@ -1,7 +1,7 @@
 hosts_file
 ==========
 
-[![Ansible Role](https://img.shields.io/ansible/role/3387.svg)](https://galaxy.ansible.com/list#/roles/3387)
+[![Build Status](https://travis-ci.org/kbrebanov/ansible-hosts_file.svg?branch=master)](https://travis-ci.org/kbrebanov/ansible-hosts_file)
 
 Configures /etc/hosts file
 
