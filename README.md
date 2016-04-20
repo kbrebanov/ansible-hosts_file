@@ -27,10 +27,10 @@ Example Playbook
 ----------------
 
 Configure /etc/hosts file using default values
-```
+```yaml
 - hosts: all
   roles:
-    - { role: kbrebanov.hosts_file }
+    - kbrebanov.hosts_file
 ```
 
 License
