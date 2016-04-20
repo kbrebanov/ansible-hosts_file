@@ -3,21 +3,26 @@
 
 - name: Include distribution specific variables
   include_vars: "{{ ansible_distribution }}.yml"
-  tags: hosts_file
+  tags:
+    - hosts_file
 
 - include: CentOS.yml
   when: ansible_distribution == "CentOS"
-  tags: hosts_file
+  tags:
+    - hosts_file
 
 - include: Ubuntu.yml
   when: ansible_distribution == "Ubuntu"
-  tags: hosts_file
+  tags:
+    - hosts_file
 
 - name: Configure hosts file
-  template: >
-    src=hosts.j2
-    dest=/etc/hosts
-    owner=root
-    group=root
-    mode=0644
-  tags: hosts_file
+  become: yes
+  template:
+    src: hosts.j2
+    dest: /etc/hosts
+    owner: root
+    group: root
+    mode: 0644
+  tags:
+    - hosts_file
